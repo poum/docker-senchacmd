@@ -1,9 +1,9 @@
 FROM java:7
 MAINTAINER Philippe Poumaroux <poum@cpan.org>
 
-ENV VERSION=4.0.5.87
+ENV VERSION=5.1.3.61
 
-ENTRYPOINT ["/opt/Sencha/Cmd/4.0.5.87/sencha"]
+ENTRYPOINT ["/opt/Sencha/Cmd/5.1.3.61/sencha"]
 
 RUN curl -o /cmd.run.zip http://cdn.sencha.com/cmd/$VERSION/SenchaCmd-$VERSION-linux-x64.run.zip && \
     unzip -p /cmd.run.zip > /cmd-install.run && \
