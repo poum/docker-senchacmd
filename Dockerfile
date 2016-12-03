@@ -1,9 +1,9 @@
 FROM java:7
 MAINTAINER Philippe Poumaroux <poum@cpan.org>
 
-ENV VERSION=6.1.2
+ENV VERSION=6.1.3
 
-ENTRYPOINT ["/opt/Sencha/Cmd/6.1.2/sencha"]
+ENTRYPOINT ["/opt/Sencha/Cmd/6.1.3/sencha"]
 
 RUN curl -o /cmd.run.zip http://cdn.sencha.com/cmd/$VERSION/no-jre/SenchaCmd-$VERSION-linux-amd64.sh.zip && \
     unzip -p /cmd.run.zip > /cmd-install.run && \
