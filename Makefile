@@ -1,5 +1,5 @@
 IMAGE=poum/senchacmd
-VERSION=6.2.0
+VERSION=6.2.2
 
 build: Dockerfile
 	docker build -t $(IMAGE):$(VERSION) .
@@ -9,11 +9,11 @@ test:
 
 tag: 
 	docker tag -f $(IMAGE):$(VERSION) $(IMAGE):6.2
-	docker tag -f $(IMAGE):$(VERSION) $(IMAGE):$(VERSION).103
+	docker tag -f $(IMAGE):$(VERSION) $(IMAGE):$(VERSION).36
 	docker tag -f $(IMAGE):$(VERSION) $(IMAGE):latest
 
 push: 
 	docker push $(IMAGE):$(VERSION)
 	docker push $(IMAGE):6.2
-	docker push $(IMAGE):$(VERSION).103
+	docker push $(IMAGE):$(VERSION).36
 	docker push $(IMAGE):latest
