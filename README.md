@@ -1,6 +1,6 @@
 # Sencha cmd image
 
-This is a tool image for the Sencha cmd, based on official java:7 image.
+This is a tool image for the Sencha cmd, based on official openjdk:7 image. `compass̀ is also included as part of sencha build process.
 
 See https://www.sencha.com/products/sencha-cmd/
 
