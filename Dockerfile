@@ -1,9 +1,9 @@
 FROM openjdk:7
 LABEL maintainer "Philippe Poumaroux <poum@cpan.org>"
 
-ENV VERSION=6.5.3
+ENV VERSION=6.6.0.13
 
-ENTRYPOINT ["/opt/Sencha/Cmd/6.5.3/sencha"]
+ENTRYPOINT ["/opt/Sencha/Cmd/6.6.0.13/sencha"]
 
 RUN curl -o /cmd.run.zip http://cdn.sencha.com/cmd/$VERSION/no-jre/SenchaCmd-$VERSION-linux-amd64.sh.zip && \
     unzip -p /cmd.run.zip > /cmd-install.run && \
