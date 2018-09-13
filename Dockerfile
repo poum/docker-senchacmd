@@ -20,4 +20,5 @@ RUN curl -o /cmd.run.zip http://cdn.sencha.com/cmd/$VERSION/no-jre/SenchaCmd-$VE
     gem update --system && \
     gem install compass && \
     apt-get remove -y ruby-dev build-essential libffi-dev && \
+    apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* 
