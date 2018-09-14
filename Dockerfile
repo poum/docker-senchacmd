@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8-jre
 LABEL maintainer "Philippe Poumaroux <poum@cpan.org>"
 
 ENV VERSION=6.6.0.13
