@@ -1,5 +1,4 @@
 FROM openjdk:8-jre
-LABEL maintainer "Philippe Poumaroux <poum@cpan.org>"
 
 ENV VERSION=6.6.0.13
 
@@ -11,14 +10,8 @@ RUN curl -o /cmd.run.zip http://cdn.sencha.com/cmd/$VERSION/no-jre/SenchaCmd-$VE
     rm /cmd-install.run /cmd.run.zip && \
     ln -s /opt/Sencha/Cmd/$VERSION/sencha /opt/Sencha/sencha && \
     apt-get update && apt-get install -y --no-install-recommends \
-        ruby \
-        libffi6 \
-        build-essential \
-        ruby-dev \
-        libffi-dev && \
-    gem update --system && \
-    gem install compass && \
-    apt-get remove -y ruby-dev build-essential libffi-dev && \
+        build-essential && \
+    apt-get remove -y build-essential && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* 
 
