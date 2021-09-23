@@ -13,11 +13,10 @@ RUN curl -o /cmd.run.zip http://cdn.sencha.com/cmd/$VERSION/no-jre/SenchaCmd-$VE
     ln -s /opt/Sencha/Cmd/$VERSION/sencha /opt/Sencha/sencha && \
     apt-get update && apt-get install -y --no-install-recommends \
         ruby \
-        libffi6 \
+        libffi7 \
         build-essential \
         ruby-dev \
         libffi-dev && \
-    gem update --system && \
     gem install compass && \
     apt-get remove -y ruby-dev build-essential libffi-dev && \
     apt-get autoremove -y && \
