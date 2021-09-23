@@ -1,0 +1,26 @@
+version: 2.1
+
+jobs:
+  docker-images:
+    resource_class: small
+    docker:
+      - image: docker:stable
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 19.03.12
+      - run: docker build -t quay.io/castor/senchacmd:6.5.0.180 .
+      - run: docker login -u "$DOCKER_LOGIN" -p "$DOCKER_PASSWORD" quay.io
+      - run: docker push quay.io/castor/senchacmd:6.5.0.180
+
+workflows:
+  version: 2
+
+  docker-images:
+    jobs:
+      - docker-images:
+          context: org-global
+          filters:
+            branches:
+              only:
+                - master
